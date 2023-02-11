@@ -1,55 +1,94 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:trainer_name",
- "creation": "2023-02-08 10:28:39.489224",
+ "autoname": "naming_series:",
+ "creation": "2023-02-11 16:10:05.960087",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "trainer_name",
-  "qualifications",
-  "column_break_3",
-  "areas_of_expertise",
-  "availability",
+  "naming_series",
+  "first_name",
+  "last_name",
+  "full_name",
+  "column_break_5",
+  "gender",
+  "dob",
   "status",
-  "contact_information_section",
+  "address_details_section",
   "address",
+  "city",
   "phone",
-  "column_break_9",
-  "email"
+  "email",
+  "column_break_12",
+  "id_card_type",
+  "id_card_no",
+  "photo"
  ],
  "fields": [
   {
-   "fieldname": "trainer_name",
+   "fieldname": "first_name",
    "fieldtype": "Data",
-   "label": "Name",
+   "label": "First Name"
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "depends_on": "eval:!(doc.__islocal)",
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Full Name",
    "unique": 1
   },
   {
-   "fieldname": "qualifications",
+   "fieldname": "email",
    "fieldtype": "Data",
-   "label": "Qualifications "
+   "label": "Email Address",
+   "options": "Email"
   },
   {
-   "fieldname": "column_break_3",
+   "fieldname": "column_break_5",
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "areas_of_expertise",
+   "fieldname": "phone",
    "fieldtype": "Data",
-   "label": "Areas of Expertise"
+   "label": "Phone No"
   },
   {
-   "fieldname": "availability",
-   "fieldtype": "Duration",
-   "label": "Availability "
+   "fieldname": "dob",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
   },
   {
-   "fieldname": "contact_information_section",
+   "fieldname": "photo",
+   "fieldtype": "Attach Image",
+   "label": "Photo"
+  },
+  {
+   "default": "GYM-TRA-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "GYM-TRA-"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "label": "Gender",
+   "options": "Gender"
+  },
+  {
+   "fieldname": "address_details_section",
    "fieldtype": "Section Break",
-   "label": "Contact Information"
+   "label": "Address Details"
   },
   {
    "fieldname": "address",
@@ -57,34 +96,42 @@
    "label": "Address"
   },
   {
-   "fieldname": "phone",
+   "fieldname": "city",
    "fieldtype": "Data",
-   "label": "Phone"
+   "label": "City"
   },
   {
-   "fieldname": "email",
-   "fieldtype": "Data",
-   "label": "Email",
-   "options": "Email"
-  },
-  {
-   "fieldname": "column_break_9",
+   "fieldname": "column_break_12",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "id_card_type",
+   "fieldtype": "Select",
+   "label": "ID Card Type",
+   "options": "\nDriving Licence\nPassport\nGovernment issued Photo ID card"
+  },
+  {
+   "fieldname": "id_card_no",
+   "fieldtype": "Data",
+   "label": "ID Card No"
   },
   {
    "fieldname": "status",
    "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Status",
    "options": "Active\nInactive"
   }
  ],
+ "image_field": "photo",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-02-09 10:18:59.680969",
+ "modified": "2023-02-11 16:56:17.660385",
  "modified_by": "Administrator",
  "module": "Gym",
  "name": "Gym Trainer",
- "naming_rule": "By fieldname",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
@@ -104,5 +151,5 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "trainer_name"
+ "title_field": "full_name"
 }

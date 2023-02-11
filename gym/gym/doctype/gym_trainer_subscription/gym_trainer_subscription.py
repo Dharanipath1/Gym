@@ -4,9 +4,7 @@
 import frappe
 from frappe.website.website_generator import WebsiteGenerator
 from frappe.website.website_generator import WebsiteGenerator
-from frappe.model.document import Document
 
-
-class GymTrainerSubscription(Document):
+class GymTrainerSubscription(WebsiteGenerator):
 	def before_save(self):
-		self.name = self.route
+		self.trainer_name = self.route

@@ -9,23 +9,25 @@
  "engine": "InnoDB",
  "field_order": [
   "naming_series",
-  "member_name",
-  "column_break_3",
-  "membership_type",
-  "joined_date",
+  "first_name",
+  "last_name",
+  "full_name",
+  "column_break_5",
+  "gender",
+  "date_of_birth",
   "contact_details_section",
   "address",
   "city",
-  "column_break_8",
   "phone_no",
-  "email"
+  "column_break_8",
+  "email",
+  "id_card_type",
+  "id_card_no",
+  "membership_type_tab",
+  "membership_type",
+  "joined_date"
  ],
  "fields": [
-  {
-   "fieldname": "member_name",
-   "fieldtype": "Data",
-   "label": "Member Name"
-  },
   {
    "fieldname": "membership_type",
    "fieldtype": "Link",
@@ -34,6 +36,7 @@
   },
   {
    "default": "Today",
+   "description": "Date of Member Joined",
    "fieldname": "joined_date",
    "fieldtype": "Date",
    "label": "Joined Date"
@@ -55,10 +58,42 @@
   },
   {
    "fieldname": "phone_no",
-   "fieldtype": "Int",
+   "fieldtype": "Data",
    "label": "Phone No",
    "length": 11,
-   "non_negative": 1
+   "non_negative": 1,
+   "options": "Phone"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "GYM-MEM-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Naming Series",
+   "options": "GYM-MEM-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "depends_on": "eval:!(doc.__islocal)",
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First name"
   },
   {
    "fieldname": "email",
@@ -67,25 +102,40 @@
    "options": "Email"
   },
   {
-   "fieldname": "column_break_3",
-   "fieldtype": "Column Break"
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "label": "Gender",
+   "options": "Gender"
   },
   {
-   "fieldname": "column_break_8",
-   "fieldtype": "Column Break"
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date Of Birth"
   },
   {
-   "fieldname": "naming_series",
+   "fieldname": "id_card_type",
    "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Naming Series",
-   "options": "GYM-MEM-",
-   "reqd": 1
+   "label": "ID Card Type",
+   "options": "\nDriving Licence\nPassport\nGovernment issued Photo ID card"
+  },
+  {
+   "fieldname": "id_card_no",
+   "fieldtype": "Data",
+   "label": "ID Card No"
+  },
+  {
+   "fieldname": "membership_type_tab",
+   "fieldtype": "Tab Break",
+   "label": "Membership Type"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-02-08 22:24:01.263393",
+ "modified": "2023-02-11 13:47:56.742802",
  "modified_by": "Administrator",
  "module": "Gym",
  "name": "Gym Member",
@@ -109,5 +159,5 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "member_name"
+ "title_field": "full_name"
 }
