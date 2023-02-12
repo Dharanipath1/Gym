@@ -23,17 +23,9 @@
   "email",
   "id_card_type",
   "id_card_no",
-  "membership_type_tab",
-  "membership_type",
   "joined_date"
  ],
  "fields": [
-  {
-   "fieldname": "membership_type",
-   "fieldtype": "Link",
-   "label": "Membership Type",
-   "options": "Gym Membership"
-  },
   {
    "default": "Today",
    "description": "Date of Member Joined",
@@ -59,6 +51,8 @@
   {
    "fieldname": "phone_no",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Phone No",
    "length": 11,
    "non_negative": 1,
@@ -87,6 +81,8 @@
    "depends_on": "eval:!(doc.__islocal)",
    "fieldname": "full_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Full name",
    "read_only": 1
   },
@@ -124,18 +120,13 @@
    "label": "ID Card No"
   },
   {
-   "fieldname": "membership_type_tab",
-   "fieldtype": "Tab Break",
-   "label": "Membership Type"
-  },
-  {
    "fieldname": "column_break_5",
    "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-02-11 13:47:56.742802",
+ "modified": "2023-02-12 18:55:19.075974",
  "modified_by": "Administrator",
  "module": "Gym",
  "name": "Gym Member",

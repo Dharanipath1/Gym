@@ -1,7 +1,7 @@
 // Copyright (c) 2023, Dharanipathi and contributors
 // For license information, please see license.txt
 
-frappe.ui.form.on('Gym Locker Booking', {
+frappe.ui.form.on('Gym Membership', {
 	// refresh: function(frm) {
 
 	// }
