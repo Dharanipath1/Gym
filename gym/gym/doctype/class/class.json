@@ -1,0 +1,133 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{MM}-{class_name}-{####}",
+ "creation": "2023-02-12 16:31:47.006384",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "class_details_section",
+  "class_name",
+  "dt",
+  "column_break_4",
+  "status",
+  "trainer_details_section",
+  "trainer",
+  "column_break_8",
+  "full_name",
+  "tab_break_10",
+  "route",
+  "published",
+  "booking"
+ ],
+ "fields": [
+  {
+   "fieldname": "class_details_section",
+   "fieldtype": "Section Break",
+   "label": "Class Details"
+  },
+  {
+   "bold": 1,
+   "fieldname": "class_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Class Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "dt",
+   "fieldtype": "Datetime",
+   "label": "Date & Time"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Available\nUnavailable"
+  },
+  {
+   "fieldname": "trainer_details_section",
+   "fieldtype": "Section Break",
+   "label": "Trainer Details"
+  },
+  {
+   "fieldname": "trainer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Trainer ",
+   "options": "Gym Trainer",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "trainer.full_name",
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tab_break_10",
+   "fieldtype": "Tab Break",
+   "label": "Web Page"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "default": "0",
+   "fieldname": "published",
+   "fieldtype": "Check",
+   "label": "Published"
+  },
+  {
+   "fieldname": "booking",
+   "fieldtype": "Table",
+   "label": "booking",
+   "options": "Booking"
+  }
+ ],
+ "has_web_view": 1,
+ "index_web_pages_for_search": 1,
+ "is_published_field": "published",
+ "links": [],
+ "modified": "2023-02-12 17:24:14.798123",
+ "modified_by": "Administrator",
+ "module": "Gym",
+ "name": "Class",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "route": "class",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

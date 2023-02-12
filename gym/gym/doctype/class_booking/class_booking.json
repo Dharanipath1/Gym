@@ -1,0 +1,105 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-02-12 16:56:35.195661",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "class_details_section",
+  "class",
+  "dt",
+  "column_break_3",
+  "trainer",
+  "trainer_full_name",
+  "booking_details_section",
+  "booking",
+  "naming_series"
+ ],
+ "fields": [
+  {
+   "fieldname": "class_details_section",
+   "fieldtype": "Section Break",
+   "label": "Class Details"
+  },
+  {
+   "fetch_from": "class.dt",
+   "fieldname": "dt",
+   "fieldtype": "Data",
+   "label": "Class Timimg"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "class.trainer",
+   "fieldname": "trainer",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Trainer "
+  },
+  {
+   "fieldname": "booking_details_section",
+   "fieldtype": "Section Break",
+   "label": "Booking Details"
+  },
+  {
+   "fieldname": "booking",
+   "fieldtype": "Table",
+   "label": "Booking",
+   "options": "Booking"
+  },
+  {
+   "default": "CLS-BK-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "CLS-BK-"
+  },
+  {
+   "bold": 1,
+   "fieldname": "class",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Class",
+   "options": "Class",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "class.full_name",
+   "fieldname": "trainer_full_name",
+   "fieldtype": "Data",
+   "label": "Trainer Full name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-02-12 17:00:22.301934",
+ "modified_by": "Administrator",
+ "module": "Gym",
+ "name": "Class Booking",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

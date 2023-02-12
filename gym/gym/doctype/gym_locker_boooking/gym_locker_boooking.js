@@ -2,7 +2,7 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on('Gym Locker Boooking', {
-	onload: function (frm) {
+	refresh: function (frm) {
 		frm.set_query("locker", function () {
 			return {
 				filters: {

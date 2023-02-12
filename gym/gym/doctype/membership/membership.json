@@ -23,8 +23,11 @@
   {
    "fieldname": "member",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Member ",
-   "options": "Gym Member"
+   "options": "Gym Member",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_3",
@@ -43,6 +46,8 @@
   {
    "fieldname": "status",
    "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Status",
    "options": "Active\nOverdue\nCanceled"
   },
@@ -65,8 +70,11 @@
   {
    "fieldname": "membership_type",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Membership Type ",
-   "options": "Membership type"
+   "options": "Membership type",
+   "reqd": 1
   },
   {
    "fieldname": "amended_from",
@@ -88,7 +96,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-02-11 15:50:12.031123",
+ "modified": "2023-02-12 18:40:02.920138",
  "modified_by": "Administrator",
  "module": "Gym",
  "name": "Membership",
